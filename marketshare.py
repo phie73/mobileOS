@@ -12,8 +12,10 @@ labels = df.iloc[:, 0]
 tickvalues = df.index #// or tickvalues = df.index
 print(labels)
 
+plt.style.use('dark_background')
 
 df.plot(y=['Android', 'iOS', 'Windows', 'Firefox OS', 'others'])
+
 plt.xticks(ticks = tickvalues, labels = labels, rotation = 'vertical')
 plt.xlabel('Dates')
 plt.ylim(0, 80)
